@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Prediction Result</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Set your desired background color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #fff; /* Container background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            color: #333; /* Heading color */
+        }
+        .blood-group {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff; /* Blood group color */
+            margin-bottom: 20px;
+        }
+        
+        .logout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logout a {
+            color: rgb(0, 0, 0);
+            font-size: x-large;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logout a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout">
+        <a href="/">Logout</a>
+    </div>
+    <div class="container">
+        <h1>Blood Group Predicted is</h1>
+        <div class="blood-group">{{ blood_group }}</div>
+    </div>
+</body>
+</html>

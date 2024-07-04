@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            font-size: large;
+            background-color: #c51129;
+            color: white;
+            padding: 1px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            background-color: #333;
+            padding: 0 10px;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .main-content div {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+        }
+        .one {
+  
+  min-height: 350px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.three {
+  
+  min-height: 300px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AUTOMATED BLOOD GROUP DETECTION</h1>
+        <nav>
+            <div class="nav-left">
+                &nbsp;<a href="/">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/about">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/team">TEAM</a>
+            </div>
+            <div class="nav-right">
+                <a href="/login" >LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/signup" >SIGNUP</a>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <div class="one" style="background-image: url('{{ url_for('static', filename='1.jpg') }}');"></div>
+
+    
+
+    <div style="padding: 25px;height:500px;background-color:rgb(187, 230, 233);font-size:120%; font-family: 'Times New Roman', Times, serif;">
+        Blood groups, commonly known as blood types, are essential classifications that play a critical role in various medical scenarios, including blood transfusions, organ transplants, and pregnancy management. This classification is based on the presence or absence of specific antigens on the surface of red blood cells (RBCs). The most prominent blood group systems are the ABO and Rh (Rhesus) systems. Understanding these systems and their compatibility is vital for ensuring safe medical procedures and preventing severe immune reactions. The ABO system categorizes blood into four main types based on the presence or absence of two antigens: A, B, AB, and O. The Rh system, based on the presence or absence of the Rh factor (D antigen), further divides each ABO blood type into Rh-positive or Rh-negative categories. Blood group compatibility is crucial for medical procedures to prevent severe immune reactions, such as hemolytic reactions during blood transfusions. In blood transfusions, Type O- is the universal donor, while Type AB+ is the universal recipient. Organ transplants also require careful matching of blood types to prevent rejection, and Rh incompatibility between an Rh-negative mother and an Rh-positive fetus can lead to hemolytic disease of the newborn (HDN). Beyond ABO and Rh, other blood group systems, including Kell, Duffy, Kidd, and MNS, also affect compatibility in transfusions and transplants. To ensure safety and compatibility, measures such as blood typing and crossmatching, strict blood bank protocols, and extensive education and training for healthcare professionals are implemented. Blood groups are fundamental to medical practice, and understanding them is crucial for preventing adverse reactions and ensuring patient safety. As medical science advances, ongoing research continues to uncover new insights into blood group antigens and their implications. For a website focused on medical information, including topics like blood groups, a clean, professional, and accessible design is essential. Recommended design elements include a calming color scheme with shades of blue, green, and white, easy-to-read fonts like Arial, Helvetica, or Verdana for body text, distinctive fonts for headings, a simple and intuitive layout, and adherence to accessibility standards. Combining comprehensive information with a user-friendly design creates a valuable resource for individuals seeking to understand blood groups and their importance in medical practice.
+    </div>
+    
+    <div class="three" style="background-image: url('{{ url_for('static', filename='3.jpg') }}');"></div>
+
+    
+    <footer>
+        
+        
+            <div>
+                <h2>Contact Us</h2>
+                <p>Address: 123 Main Street, Hometown, Country</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@abgd.com</p>
+            </div>
+        <p>&copy; 2024 ABGD. All rights reserved.</p>
+    </footer>
+</body>
+</html>

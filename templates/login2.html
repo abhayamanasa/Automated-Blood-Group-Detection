@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #e4ace6, #a5beea);
+            display: flex;
+            flex-direction: column;
+            font-size: x-large;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: rgb(0, 0, 0);
+        }
+        .logout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logout a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logout a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-bottom: 5px;
+            text-align: left;
+            width: 100%;
+        }
+        input[type="file"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #imagePreview {
+            display: none;
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout">
+        <a href="/">Logout</a>
+    </div>
+
+    <div class="container">
+        <h2>Predict Blood Group</h2>
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <label for="imageUpload">Choose Image:</label>
+            <input type="file" name="file" accept="image/*" onchange="displayImage(this)">
+            <img id="imagePreview" src="" alt="Image Preview">
+            <button type="submit">Predict Blood Group</button>
+        </form>
+        
+    </div>
+
+    <script>
+        function displayImage(input) {
+            const imagePreview = document.getElementById('imagePreview');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        }
+
+        function predictBloodGroup() {
+            const imageUpload = document.getElementById('imageUpload').files[0];
+            if (imageUpload) {
+                // Placeholder function for blood group prediction
+                window.location.href = 'result.html';
+            } else {
+                alert('Please choose an image before predicting.');
+            }
+        }
+    </script>
+</body>
+</html>

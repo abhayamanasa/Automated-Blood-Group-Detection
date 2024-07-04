@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                font-size: large;
+                background-color: #c51129;
+                color: white;
+                padding: 1px 0;
+                text-align: center;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                height: 60px;
+                background-color: #333;
+                padding: 0 10px;
+            }
+            .nav-left, .nav-right {
+                display: flex;
+            }
+            nav a {
+                color: white;
+                padding: 14px 20px;
+                text-decoration: none;
+                text-align: center;
+            }
+            nav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .container {
+                padding: 20px;
+            }
+            .main-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content div {
+                flex: 1;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .main-content img {
+                max-width: 100%;
+                height: auto;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                width: 100%;
+                bottom: 0;
+            }
+             .one {
+            min-height: 400px; 
+            background-image: url(4.jpg);;
+            background-size: 1300px 500px ;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            }
+            .two {
+                min-height: 500px; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex; 
+                margin-bottom: 0px;
+            }     
+            .two .pic1 {
+                margin-top: 10px;
+                margin-left: 220px;
+                    width: 290px;
+                    height: 450px;
+                    background: #ffffff;
+            } 
+            .two .pic1 pic{          
+                color: #FFFFFF;
+                background-size: cover;
+                background-repeat: no-repeat;
+            } 
+        </style>
+    </head>
+    
+    <body>
+        
+    <header>
+        <h1>AUTOMATED BLOOD GROUP DETECTION</h1><br>
+        <nav>
+            <div class="nav-left">
+                &nbsp;<a href="/">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/about">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/team">TEAM</a>
+            </div>
+            <div class="nav-right">
+                <a href="/login" >LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/signup" >SIGNUP</a>
+            </div>
+            
+        </nav>
+    </header>
+        <div class="one" style="background-image: url('{{ url_for('static', filename='4.jpg') }}');">
+            
+        </div>
+        <div class="two">
+        <div class="pic1" >
+            <div class="pic" align="center">
+            <img src="static/5.jpg" height="310px" width="290px">
+            <h1 style="font-family: 'Comic Sans MS';" align="center">D Abhaya Manasa</h1>
+            <h3 style="font-family: 'Comic Sans MS';" align="center">21R11A05C0</h3>
+            <h3 style="font-family: 'Comic Sans MS';" align="center">GCTC</h3> 
+            </div>
+        </div>
+        <div class="pic1" >
+            <div class="pic" align="center">
+            <img src="static/6.jpg" height="310px" width="270px" onmouseover="On(this)" onmouseout="Off(this)">
+            <h1 style="font-family: 'Comic Sans MS';" align="center">N Kusuma</h1>
+            <h3 style="font-family: 'Comic Sans MS';" align="center">21R11A05D8</h3>
+            <h3 style="font-family: 'Comic Sans MS';" align="center">GCTC</h3> 
+            </div>
+        </div></div>
+        
+    <footer>
+        
+        
+        <div>
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main Street, Hometown, Country</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@abgd.com</p>
+        </div>
+    <p>&copy; 2024 ABGD. All rights reserved.</p>
+</footer>
+    </body>
+</html>

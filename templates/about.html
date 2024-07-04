@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                font-size: large;
+                background-color: #c51129;
+                color: white;
+                padding: 1px 0;
+                text-align: center;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                height: 60px;
+                background-color: #333;
+                padding: 0 10px;
+            }
+            .nav-left, .nav-right {
+                display: flex;
+            }
+            nav a {
+                color: white;
+                padding: 14px 20px;
+                text-decoration: none;
+                text-align: center;
+            }
+            nav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .container {
+                padding: 20px;
+            }
+            .main-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content div {
+                flex: 1;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .main-content img {
+                max-width: 100%;
+                height: auto;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                width: 100%;
+                bottom: 0;
+            }
+            .row {
+                display: flex;
+            }
+            .column {
+                flex: 50%;
+                padding: 10px;
+                height: 300px; 
+            }
+            .two {
+                background-image: url('{{ url_for('static', filename='x.jpg') }}');;
+                min-height: 397px; 
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex; 
+                margin-bottom: 0px;
+            }     
+            .two .box {
+                width: 35%;
+                height: 66.7%;
+                margin-left: 100px;
+                position: absolute;
+                background:linear-gradient(135deg, #199abd 40%,#ffffff 100%);
+                overflow: hidden;
+                display: flex;
+            }
+            .three {
+            background: linear-gradient(135deg, #a4a879 10%, #f0a768 100%);
+            min-height: 250px; 
+            margin-top: -20px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>AUTOMATED BLOOD GROUP DETECTION</h1>
+            <nav>
+                <div class="nav-left">
+                    &nbsp;<a href="/">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/about">ABOUT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/team">TEAM</a>
+                </div>
+                <div class="nav-right">
+                    <a href="/login" >LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/signup">SIGNUP</a>
+                </div>
+                
+            </nav>
+        </header>
+        <div class="row"><div style=" background-repeat: no-repeat; background-size: cover; background: linear-gradient(135deg, #ffffff 10%, #ebb5e4 100%);" class="column"><h4 style="font-size: 120%; font-family: Georgia, 'Times New Roman', Times, serif;">Fingerprints are unique to each individual, formed by ridges and valleys on the skin's surface. Even identical twins have distinct fingerprints. This uniqueness arises from both genetic and environmental factors during fetal development, making fingerprints a reliable biometric identifier. The patterns, such as loops, whorls, and arches, are analyzed in forensic science and identity verification due to their stability and individuality.</h4></div>
+        <div style="background-image: url('{{ url_for('static', filename='y.jpg') }}'); background-repeat: no-repeat; background-size: cover;" class="column"></div>
+        </div>
+        <div class="two"><div class="box"><h1 align="center" style=" margin-left: 10; font-size: 120%; font-family: 'Times New Roman', Times, serif;">The correlation between fingerprints and blood groups lies in the genetic underpinnings that influence both characteristics. Blood group antigens, such as A, B, AB, and O, are determined by specific alleles inherited from parents. These genetic markers are also linked to other physical traits, potentially influencing fingerprint patterns. Studies have explored these connections to develop algorithms that predict blood groups from fingerprint images, leveraging the consistency and accessibility of fingerprint data in forensic and medical contexts.</h1></div></div>
+        <div class="three"><h1 style="margin-left: 10; font-size: 120%; font-family: 'Times New Roman', Times, serif;"><br><br>Predicting blood groups from fingerprints holds significant practical value. In forensic investigations, identifying the blood group of an unknown individual from crime scene evidence can provide crucial leads. Medical emergencies where a patient's blood type is urgently needed but unknown could benefit from quick identification through fingerprint analysis. This approach could streamline processes in healthcare settings and improve patient care by ensuring timely and accurate blood transfusions. Overall, integrating fingerprint analysis with blood group prediction enhances efficiency in various fields, emphasizing the interdisciplinary application of biometric data in real-world scenarios.</h1></div>
+    </body>
+    
+    <footer>
+        
+        
+        <div>
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main Street, Hometown, Country</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@abgd.com</p>
+        </div>
+    <p>&copy; 2024 ABGD. All rights reserved.</p>
+</footer>
+</html>
